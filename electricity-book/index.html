@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>電學立體書</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="國中理化與 IGCSE／GCSE 電學的互動立體書：七堂課從電荷、電流、電壓、電阻、串並聯、電功率講到家庭用電安全，每張圖都可以轉動和操作。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;900&display=swap">
+<link rel="stylesheet" href="css/book.css">
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<a class="skip" href="#view">跳到內容</a>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="#home" aria-label="電學立體書・回到封面"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg><span>電學立體書</span></a>
+    <nav class="pill" id="pill" aria-label="課次">
+      <button type="button" class="pill-arrow" id="pill-prev" aria-label="上一頁"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 4 6.5 10l6 6"/></svg></button>
+      <a class="pill-main" id="pill-main" href="#toc" aria-label="打開目錄"></a>
+      <button type="button" class="pill-arrow" id="pill-next" aria-label="下一頁"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7.5 4 6 6-6 6"/></svg></button>
+    </nav>
+    <div class="tools">
+      <button type="button" class="tbtn" id="btn-read" aria-pressed="false" title="用語音朗讀這一頁"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12" fill="none"/></svg><span class="lab">朗讀</span></button>
+      <button type="button" class="tbtn" id="btn-toc" aria-expanded="false" aria-controls="toc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h11" fill="none"/></svg><span class="lab">目錄</span></button>
+      <button type="button" class="tbtn" id="btn-theme" aria-pressed="false" title="切換白天／夜間"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span class="lab">夜間</span></button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="toc" hidden>
+  <nav class="drawer-panel" aria-label="目錄">
+    <div class="drawer-head"><p class="drawer-title">目錄</p><button type="button" class="tbtn" id="toc-close">關閉</button></div>
+    <ol class="toc-list" id="toc-list"></ol>
+  </nav>
+</div>
+
+<main id="view" tabindex="-1"></main>
+
+<footer class="foot">
+  <p>電學立體書・給正在學電學的你。圖中的數值是為了教學而簡化的模型，真實電路會受溫度、電池內電阻等影響。</p>
+  <p>靈感來自 Techartist 的互動物理書《Every Joule》。</p>
+</footer>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
