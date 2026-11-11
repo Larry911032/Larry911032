@@ -43,6 +43,10 @@ js/lessons/*.js       七堂課的內容和立體圖
 
 要修改課文，直接編輯 `js/lessons/` 裡對應的檔案：`bigIdea`、`predict`、`watch`（示範步驟）、`tryIt`、`challenge`、`body`（課文）、`keywords`、`quiz`、`summary`。
 
+## 做別的主題
+
+`PLAYBOOK.md` 是製作手冊：教學流程、視覺設計、程式架構、踩過的坑，以及在新的 Claude 對話裡怎麼開頭。`tools/` 裡有打包（esbuild）和測試（Playwright 截圖、3D 互動測試、課程流程測試）的腳本，用法寫在手冊第六節。
+
 ## 說明
 
 - 立體圖用簡化的模型：燈泡電阻固定、電池沒有內電阻，電子的速度和交流電的振動都放慢或加快了。

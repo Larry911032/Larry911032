@@ -177,6 +177,7 @@ function mount({ stageEl, controlsEl, readoutsEl }) {
   function get() { return { ...state, ...res, tripped }; }
   function set(p, user = false) {
     if (p.reset) { tripped = null; pending = null; }
+    if ('rcd' in p && !p.rcd && tripped === 'rcd') tripped = null; // 拆掉已經跳脫的漏電斷路器，就重新判斷
     const { reset, ...rest } = p;
     Object.assign(state, rest);
     if (!user) ['kettle', 'earth', 'fault', 'touch', 'rcd'].forEach((k) => ui.show(k, state[k]));

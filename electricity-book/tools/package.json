@@ -1,0 +1,14 @@
+{
+  "name": "electricity-book-tools",
+  "private": true,
+  "description": "電學立體書的打包與測試工具",
+  "scripts": {
+    "vendor": "bash fetch-vendor.sh",
+    "build": "node build-artifact.mjs",
+    "test:interact": "node interact.cjs",
+    "test:flow": "node flow.cjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.24.0"
+  }
+}
